@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Baristas Madrid</title>
+
+	<link rel="stylesheet" href="cafeteria.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+	<div class="cart-panel" id="cartPanel">
+		<div class="cart-header">
+			<h2>Tu carrito</h2>
+			<button class="close-cart" id="closeCart">X</button>
+		</div>
+
+		<div class="cart-items" id="cartItems"></div>
+
+		<div class="cart-total">
+			<h3>Total: <span id="cartTotal">0.00€</span></h3>
+			<button class="buy-btn" id="buyBtn">Pagar</button>
+		</div>
+	</div>
+
+	<div class="checkout-page" id="checkoutPage">
+		<div class="checkout-box">
+			<button class="close-checkout" id="closeCheckout">X</button>
+
+			<h2>Datos de envío</h2>
+
+			<form class="checkout-form" id="checkoutForm">
+				<input type="text" placeholder="Nombre completo" required>
+				<input type="text" placeholder="Dirección de entrega" required>
+				<input type="text" placeholder="Ciudad" required>
+				<input type="tel" placeholder="Teléfono" required>
+
+				<label>Día de entrega</label>
+				<input type="date" required>
+
+				<label>Hora de entrega</label>
+				<select required>
+					<option value="">Selecciona una hora</option>
+					<option>09:00 - 11:00</option>
+					<option>11:00 - 13:00</option>
+					<option>13:00 - 15:00</option>
+					<option>15:00 - 17:00</option>
+					<option>17:00 - 19:00</option>
+					<option>19:00 - 21:00</option>
+				</select>
+
+				<button type="submit">Confirmar pedido</button>
+			</form>
+		</div>
+	</div>
+
+	<header>
+		<div class="container-hero">
+			<div class="container hero">
+
+				<div class="customer-support" id="supportBtn">
+					<i class="fa-solid fa-headset"></i>
+					<div class="content-customer-support">
+						<span class="text">Soporte al cliente</span>
+						<span class="number">+34 912 345 678</span>
+					</div>
+				</div>
+
+				<div class="support-box" id="supportBox">
+					<div class="support-top">
+						<h3>Soporte técnico</h3>
+						<button class="close-support" id="closeSupport">X</button>
+					</div>
+
+					<p>Nuestro equipo está disponible 24/7.</p>
+
+					<a href="tel:+34912345678" class="support-call">
+						Llamar ahora
+					</a>
+				</div>
+
+				<div class="container-logo">
+					<div class="cup-smoke">
+						<span></span>
+						<span></span>
+						<span></span>
+						<i class="fa-solid fa-mug-hot"></i>
+					</div>
+
+					<h1 class="logo">
+						<a href="#">Café Premium de Madrid</a>
+					</h1>
+				</div>
+
+				<div class="container-user">
+					<div class="cart-box" id="openCart">
+						<i class="fa-solid fa-basket-shopping"></i>
+						<span class="cart-count" id="cartCount">0</span>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="container-navbar">
+			<nav class="navbar container">
+				<ul class="menu">
+					<li><a href="#inicio">Inicio</a></li>
+					<li><a href="#espresso">Espresso</a></li>
+					<li><a href="#capuchino">Capuchino</a></li>
+					<li><a href="#coldbrew">Cold Brew</a></li>
+					<li><a href="#matcha">Matcha</a></li>
+				</ul>
+
+				<form class="search-form" onsubmit="return false;">
+					<input type="search" placeholder="Buscar café...">
+					<button type="button" class="btn-search">
+						<i class="fa-solid fa-magnifying-glass"></i>
+					</button>
+				</form>
+			</nav>
+		</div>
+	</header>
+
+	<section class="banner" id="inicio">
+		<div class="content-banner">
+			<p>Café artesanal</p>
+			<h2>100% Natural <br>Café Fresco</h2>
+			<a href="#productos">Comprar ahora</a>
+		</div>
+	</section>
+
+	<section class="container top-products" id="productos">
+		<h1 class="heading-1">Mejores Productos</h1>
+
+		<div class="container-products">
+
+			<div class="card-product" id="espresso">
+				<div class="container-img">
+					<img src="img/cafe-irish.jpg" alt="Espresso Italiano">
+					<span class="discount">-10%</span>
+				</div>
+
+				<div class="content-card-product">
+					<div class="stars rating">
+						<i class="fa-regular fa-star" data-value="1"></i>
+						<i class="fa-regular fa-star" data-value="2"></i>
+						<i class="fa-regular fa-star" data-value="3"></i>
+						<i class="fa-regular fa-star" data-value="4"></i>
+						<i class="fa-regular fa-star" data-value="5"></i>
+					</div>
+
+					<h3>Espresso Italiano</h3>
+
+					<button type="button" class="add-cart" data-name="Espresso Italiano" data-price="1.90">
+						<i class="fa-solid fa-basket-shopping"></i>
+					</button>
+
+					<p class="price">1.90€ <span>2.30€</span></p>
+				</div>
+			</div>
+
+			<div class="card-product" id="capuchino">
+				<div class="container-img">
+					<img src="img/cafe-ingles.jpg" alt="Capuchino Cremoso">
+					<span class="discount">-15%</span>
+				</div>
+
+				<div class="content-card-product">
+					<div class="stars rating">
+						<i class="fa-regular fa-star" data-value="1"></i>
+						<i class="fa-regular fa-star" data-value="2"></i>
+						<i class="fa-regular fa-star" data-value="3"></i>
+						<i class="fa-regular fa-star" data-value="4"></i>
+						<i class="fa-regular fa-star" data-value="5"></i>
+					</div>
+
+					<h3>Capuchino Cremoso</h3>
+
+					<button type="button" class="add-cart" data-name="Capuchino Cremoso" data-price="3.20">
+						<i class="fa-solid fa-basket-shopping"></i>
+					</button>
+
+					<p class="price">3.20€ <span>3.80€</span></p>
+				</div>
+			</div>
+
+			<div class="card-product" id="coldbrew">
+				<div class="container-img">
+					<img src="img/cafe-australiano.jpg" alt="Cold Brew">
+					<span class="discount">-8%</span>
+				</div>
+
+				<div class="content-card-product">
+					<div class="stars rating">
+						<i class="fa-regular fa-star" data-value="1"></i>
+						<i class="fa-regular fa-star" data-value="2"></i>
+						<i class="fa-regular fa-star" data-value="3"></i>
+						<i class="fa-regular fa-star" data-value="4"></i>
+						<i class="fa-regular fa-star" data-value="5"></i>
+					</div>
+
+					<h3>Cold Brew</h3>
+
+					<button type="button" class="add-cart" data-name="Cold Brew" data-price="4.10">
+						<i class="fa-solid fa-basket-shopping"></i>
+					</button>
+
+					<p class="price">4.10€ <span>4.50€</span></p>
+				</div>
+			</div>
+
+			<div class="card-product" id="matcha">
+				<div class="container-img">
+					<img src="img/imgmatchaa.png" alt="Matcha Latte">
+					<span class="discount">Nuevo</span>
+				</div>
+
+				<div class="content-card-product">
+					<div class="stars rating">
+						<i class="fa-regular fa-star" data-value="1"></i>
+						<i class="fa-regular fa-star" data-value="2"></i>
+						<i class="fa-regular fa-star" data-value="3"></i>
+						<i class="fa-regular fa-star" data-value="4"></i>
+						<i class="fa-regular fa-star" data-value="5"></i>
+					</div>
+
+					<h3>Matcha Latte</h3>
+
+					<button type="button" class="add-cart" data-name="Matcha Latte" data-price="5.20">
+						<i class="fa-solid fa-basket-shopping"></i>
+					</button>
+
+					<p class="price">5.20€</p>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<script src="Cafeteria.js"></script>
+</body>
+</html>

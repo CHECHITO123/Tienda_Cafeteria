@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creador de Ensaladas Personalizadas</title>
+    <link rel="stylesheet" href="ensalada.css">
+</head>
+<body>
+    <div class="container">
+        <h1> Ensaladas Personalizadas</h1>
+        <div class="ensalada-area">
+            <img src="lechuga-removebg-preview (1).png" alt="Imagen de ensalada base" class="img-ensalada">
+        </div>
+        <div class="ingredientes-menu">
+            <h2>Elige tus ingredientes:</h2>
+            <div class="lista-ingredientes">
+                <div class="ingrediente">
+                    <input type="checkbox" id="tomate" name="ingrediente">
+                    <label for="tomate">
+                        <img src="tomate.png" alt="Tomate" class="img-ingrediente">
+                        Tomate
+                    </label>
+                </div>
+                <div class="ingrediente">
+                    <input type="checkbox" id="queso" name="ingrediente">
+                    <label for="queso">
+                        <img src="queso.png" alt="queso" class="img-ingrediente">
+                        queso
+            </div>
+            <div class="ingrediente">
+                <input type="checkbox" id="Aceitunas" name="ingrediente">
+                <label for="Aceitunas">
+                    <img src="aceitunas.png" alt="Aceitunas" class="img-ingrediente">
+                    Aceitunas
+            </div>
+            <div class="ingrediente">
+                <input type="checkbox" id="Pepino" name="ingrediente">
+                <label for="Pepino">
+                    <img src="pepino.png" alt="Pepino" class="img-ingrediente">
+                    Pepino
+
+            </div>
+            <button class="boton-agregar">Agregar al carrito</button>
+        </div>
+    </div>
+    <script src="ensalada.js"></script>
+</body>
+</html>
